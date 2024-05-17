@@ -15,3 +15,14 @@ This application is designed to play Sudoku Solver game by giving user input.
 IDE: Eclipse
 
 Language: Java
+## Screenshots
+
+![AppResult1](ScreenShot/Result01.png)
+
+![AppResult2](ScreenShot/Result02.png)
+
+![AppResult3](ScreenShot/Result03.png)
+
+![AppResult2](ScreenShot/Result04.png)
+
+![AppResult3](ScreenShot/Result05.png)
