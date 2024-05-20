@@ -8,11 +8,11 @@ import sudokusolver.models.Game;
 
 public class GameView {
 	private Game game;
-	private GameModel gameModel;
+	private GameViewModel gameViewModel;
 	private Scanner sc = new Scanner(System.in);
 
 	public GameView() {
-		gameModel = new GameModel(this);
+		gameViewModel = new GameViewModel(this);
 	}
 
 	public void init() {
@@ -57,16 +57,16 @@ public class GameView {
 
 	private void game_3X3() {
 		int choice, count, mistake, maxVal;
-		showMessage("\n    Select Game No : 1 to " + gameModel.getCount3() + "\n");
+		showMessage("\n    Select Game No : 1 to " + gameViewModel.getCount3() + "\n");
 		showMessage("    Enter Your Choice : ");
 		choice = sc.nextInt();
 		sc.nextLine();
 		switch (choice) {
 		case 1:
-			game = gameModel.game3_01();
-			count = gameModel.getCount(game);
-			mistake = gameModel.getMistake(game);
-			maxVal = gameModel.getMaxVal(game);
+			game = gameViewModel.game3_01();
+			count = gameViewModel.getCount(game);
+			mistake = gameViewModel.getMistake(game);
+			maxVal = gameViewModel.getMaxVal(game);
 			startGame(game, count, mistake, maxVal);
 			break;
 		case 0:
@@ -78,16 +78,16 @@ public class GameView {
 
 	private void game_4X4() {
 		int choice, count, mistake, maxVal;
-		showMessage("\n    Select Game No : 1 to " + gameModel.getCount4() + "\n");
+		showMessage("\n    Select Game No : 1 to " + gameViewModel.getCount4() + "\n");
 		showMessage("    Enter Your Choice : ");
 		choice = sc.nextInt();
 		sc.nextLine();
 		switch (choice) {
 		case 1:
-			game = gameModel.game4_01();
-			count = gameModel.getCount(game);
-			mistake = gameModel.getMistake(game);
-			maxVal = gameModel.getMaxVal(game);
+			game = gameViewModel.game4_01();
+			count = gameViewModel.getCount(game);
+			mistake = gameViewModel.getMistake(game);
+			maxVal = gameViewModel.getMaxVal(game);
 			startGame(game, count, mistake, maxVal);
 			break;
 		case 0:
@@ -96,26 +96,26 @@ public class GameView {
 			showMessage("\nPlease, Enter valid input to continue...\n\n");
 		}
 	}
-	
+
 	private void game_9X9() {
 		int choice, count, mistake, maxVal;
-		showMessage("\n    Select Game No : 1 to " + gameModel.getCount9() + "\n");
+		showMessage("\n    Select Game No : 1 to " + gameViewModel.getCount9() + "\n");
 		showMessage("    Enter Your Choice : ");
 		choice = sc.nextInt();
 		sc.nextLine();
 		switch (choice) {
 		case 1:
-			game = gameModel.game9_01();
-			count = gameModel.getCount(game);
-			mistake = gameModel.getMistake(game);
-			maxVal = gameModel.getMaxVal(game);
+			game = gameViewModel.game9_01();
+			count = gameViewModel.getCount(game);
+			mistake = gameViewModel.getMistake(game);
+			maxVal = gameViewModel.getMaxVal(game);
 			startGame(game, count, mistake, maxVal);
 			break;
 		case 2:
-			game = gameModel.game9_02();
-			count = gameModel.getCount(game);
-			mistake = gameModel.getMistake(game);
-			maxVal = gameModel.getMaxVal(game);
+			game = gameViewModel.game9_02();
+			count = gameViewModel.getCount(game);
+			mistake = gameViewModel.getMistake(game);
+			maxVal = gameViewModel.getMaxVal(game);
 			startGame(game, count, mistake, maxVal);
 			break;
 		case 0:
@@ -124,13 +124,14 @@ public class GameView {
 			showMessage("\nPlease, Enter valid input to continue...\n\n");
 		}
 	}
+
 	private void startGame(Game game, int count, int mistake, int maxVal) {
 		int row, col, value;
 		boolean valid;
 		while (count > 0 && mistake > 0) {
 			try {
 				showMessage("\n    Avaliable Chance - " + mistake + "/3\n");
-				gameModel.display(game);
+				gameViewModel.display(game);
 				showMessage("   Enter Row No : ");
 				row = sc.nextInt();
 				sc.nextLine();
@@ -140,7 +141,7 @@ public class GameView {
 				showMessage("   Enter Value  : ");
 				value = sc.nextInt();
 				sc.nextLine();
-				valid = gameModel.checkValues(game, row, col, value);
+				valid = gameViewModel.checkValues(game, row, col, value);
 				if (!valid) {
 					mistake--;
 				} else {
@@ -154,8 +155,8 @@ public class GameView {
 			}
 		}
 		showMessage("\n    Solved Sudoku - Mistakes : " + (3 - mistake) + "\n");
-		gameModel.display(game);
-		gameModel.setGameScore(game, mistake);
+		gameViewModel.display(game);
+		gameViewModel.setGameScore(game, mistake);
 		showMessage("\nGame Score is added...\n\n");
 	}
 

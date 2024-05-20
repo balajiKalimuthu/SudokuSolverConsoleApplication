@@ -9,11 +9,11 @@ import sudokusolver.gamemenu.GameView;
 
 public class MainMenuView {
 	private ApplicationPage app = ApplicationPage.getInstance();
-	private MainMenuModel mainMenuModel;
+	private MainMenuViewModel mainMenuViewModel;
 	private Scanner sc = new Scanner(System.in);
-	
+
 	public MainMenuView() {
-		mainMenuModel = new MainMenuModel(this);
+		mainMenuViewModel = new MainMenuViewModel(this);
 	}
 
 	public void init() {
@@ -33,17 +33,17 @@ public class MainMenuView {
 				int choice = sc.nextInt();
 				sc.nextLine();
 				switch (choice) {
-					case 1:
-						mainMenuModel.getScore();
-						break;
-					case 2:
-						new GameView().init();
-						break;
-					case 0:
-						end();
-						return;
-					default:
-						showMessage("\nPlease, Enter valid input to continue...\n\n");
+				case 1:
+					mainMenuViewModel.getScore();
+					break;
+				case 2:
+					new GameView().init();
+					break;
+				case 0:
+					end();
+					return;
+				default:
+					showMessage("\nPlease, Enter valid input to continue...\n\n");
 				}
 			} catch (Exception e) {
 				showMessage("\nPlease, Enter valid input to continue...\n\n");
@@ -51,13 +51,14 @@ public class MainMenuView {
 				init();
 				return;
 			}
-		}		
-	}
-	private void end() {
-		showMessage("\n\nx-x-x-x- THANKS FOR USING "+ app.getAppName() +" -x-x-x-x\n\n");
+		}
 	}
 
-	public void showMessage (String message) {
+	private void end() {
+		showMessage("\n\nx-x-x-x- THANKS FOR USING " + app.getAppName() + " -x-x-x-x\n\n");
+	}
+
+	public void showMessage(String message) {
 		System.out.print(message);
 	}
 }

@@ -23,7 +23,7 @@ public class ApplicationPage {
 		MainMenuView mainMenuView = new MainMenuView();
 		mainMenuView.init();
 	}
-	
+
 	public void init() {
 		app = ApplicationPage.getInstance();
 		showMessage("\t+-----------------------------+\n");
@@ -43,7 +43,7 @@ public class ApplicationPage {
 		}
 		return app;
 	}
-	
+
 	public void showMessage(String message) {
 		System.out.print(message);
 	}

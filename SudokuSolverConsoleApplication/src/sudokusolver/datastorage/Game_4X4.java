@@ -14,16 +14,10 @@ class Game_4X4 extends Game {
 	public static int getGameCount() {
 		return gameCount;
 	}
-	
+
 	public static Game_4X4 game01() {
-		int answer[][] = {{1,4,3,2},
-				          {4,2,1,3},
-				          {2,3,4,1},
-				          {3,1,2,4}};
-		int play[][] = {{0,0,3,0},
-		          		{0,0,1,0},
-		          		{0,0,0,1},
-		          		{3,0,2,0}};
+		int answer[][] = { { 1, 4, 3, 2 }, { 4, 2, 1, 3 }, { 2, 3, 4, 1 }, { 3, 1, 2, 4 } };
+		int play[][] = { { 0, 0, 3, 0 }, { 0, 0, 1, 0 }, { 0, 0, 0, 1 }, { 3, 0, 2, 0 } };
 		Game_4X4 game4 = new Game_4X4(4, 4, play, answer);
 		game4.setCount(11);
 		return game4;

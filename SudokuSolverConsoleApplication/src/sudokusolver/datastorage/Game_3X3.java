@@ -14,15 +14,11 @@ class Game_3X3 extends Game {
 	public static int getGameCount() {
 		return gameCount;
 	}
-	
+
 	public static Game_3X3 game01() {
-		int answer[][] = {{1,3,2},
-				          {3,2,1},
-				          {2,1,3}};
-		int play[][] = {{1,0,0},
-		          		{0,2,0},
-		          		{0,0,3}};
-		Game_3X3 game3 = new Game_3X3(3,3,play,answer);
+		int answer[][] = { { 1, 3, 2 }, { 3, 2, 1 }, { 2, 1, 3 } };
+		int play[][] = { { 1, 0, 0 }, { 0, 2, 0 }, { 0, 0, 3 } };
+		Game_3X3 game3 = new Game_3X3(3, 3, play, answer);
 		game3.setCount(6);
 		return game3;
 	}

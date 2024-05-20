@@ -5,12 +5,12 @@ package sudokusolver.gamemenu;
 import sudokusolver.datastorage.AppDataBase;
 import sudokusolver.models.Game;
 
-public class GameModel {
+public class GameViewModel {
 	private AppDataBase dataBase = AppDataBase.getInstance();
 	private GameView gameView;
 	private int playValue, answerValue;
 
-	public GameModel(GameView gameView) {
+	public GameViewModel(GameView gameView) {
 		this.gameView = gameView;
 	}
 
@@ -29,15 +29,15 @@ public class GameModel {
 	public int getCount4() {
 		return dataBase.getCount4();
 	}
-	
+
 	public Game game9_01() {
 		return dataBase.game9_01();
 	}
-	
+
 	public Game game9_02() {
 		return dataBase.game9_02();
 	}
-	
+
 	public int getCount9() {
 		return dataBase.getCount9();
 	}

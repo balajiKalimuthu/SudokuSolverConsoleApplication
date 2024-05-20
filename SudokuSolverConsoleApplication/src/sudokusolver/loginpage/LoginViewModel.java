@@ -5,11 +5,11 @@ package sudokusolver.loginpage;
 import sudokusolver.datastorage.AppDataBase;
 import sudokusolver.validator.ValueValidator;
 
-public class LoginModel {
+public class LoginViewModel {
 	private LoginView loginView;
 	private AppDataBase dataBase = AppDataBase.getInstance();
 
-	public LoginModel(LoginView loginView) {
+	public LoginViewModel(LoginView loginView) {
 		this.loginView = loginView;
 	}
 
@@ -37,7 +37,7 @@ public class LoginModel {
 		}
 		return false;
 	}
-	
+
 	public boolean validName(String name) {
 		if (ValueValidator.validateName(name)) {
 			return true;

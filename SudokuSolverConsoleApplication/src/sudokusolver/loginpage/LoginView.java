@@ -7,7 +7,7 @@ import java.util.Scanner;
 import sudokusolver.mainmenu.MainMenuView;
 
 public class LoginView {
-	private LoginModel loginModel;
+	private LoginViewModel loginViewModel;
 	private Scanner sc = new Scanner(System.in);
 
 	private String name, userId, password;
@@ -15,7 +15,7 @@ public class LoginView {
 	private boolean valid;
 
 	public LoginView() {
-		loginModel = new LoginModel(this);
+		loginViewModel = new LoginViewModel(this);
 	}
 
 	public void init() {
@@ -40,7 +40,7 @@ public class LoginView {
 
 				switch (choice) {
 				case 1:
-					if (!loginModel.checkAvaliableUser()) {
+					if (!loginViewModel.checkAvaliableUser()) {
 						createNewUser();
 					}
 					openOldUser();
@@ -68,25 +68,25 @@ public class LoginView {
 		while (!valid) {
 			showMessage("  Enter Name      : ");
 			name = sc.nextLine();
-			valid = loginModel.validName(name);
+			valid = loginViewModel.validName(name);
 		}
 		do {
 			showMessage("  Enter User Id   : ");
 			userId = sc.nextLine();
-			valid = loginModel.validUserId(userId);
+			valid = loginViewModel.validUserId(userId);
 		} while (!valid);
 		do {
 			showMessage("  Enter Password  : ");
 			password = sc.nextLine();
-			valid = loginModel.validPassword(password);
+			valid = loginViewModel.validPassword(password);
 		} while (!valid);
 
 		do {
 			showMessage("  Enter Phone No  : ");
 			phoneNo = sc.nextLong();
-			valid = loginModel.validPhoneNo(phoneNo);
+			valid = loginViewModel.validPhoneNo(phoneNo);
 		} while (!valid);
-		loginModel.createCredentials(name, userId, password, phoneNo);
+		loginViewModel.createCredentials(name, userId, password, phoneNo);
 	}
 
 	private void openOldUser() {
@@ -95,7 +95,7 @@ public class LoginView {
 		userId = sc.nextLine();
 		showMessage("  Enter Password  : ");
 		password = sc.nextLine();
-		valid = loginModel.checkUserDetails(userId, password);
+		valid = loginViewModel.checkUserDetails(userId, password);
 		if (valid) {
 			new MainMenuView().init();
 		}

@@ -59,15 +59,15 @@ public class AppDataBase {
 	public int getCount4() {
 		return Game_4X4.getGameCount();
 	}
-	
+
 	public Game game9_01() {
 		return Game_9X9.game01();
 	}
-	
+
 	public Game game9_02() {
 		return Game_9X9.game02();
 	}
-	
+
 	public int getCount9() {
 		return Game_9X9.getGameCount();
 	}
