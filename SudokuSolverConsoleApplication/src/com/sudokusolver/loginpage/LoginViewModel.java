@@ -1,9 +1,9 @@
-package sudokusolver.loginpage;
+package com.sudokusolver.loginpage;
 
 // SUDOKU SOLVER APPLICATION USER LOGIN MODEL PAGE - future update
 
-import sudokusolver.datastorage.AppDataBase;
-import sudokusolver.validator.ValueValidator;
+import com.sudokusolver.datastorage.AppDataBase;
+import com.sudokusolver.validator.ValueValidator;
 
 public class LoginViewModel {
 	private LoginView loginView;

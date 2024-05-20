@@ -1,8 +1,8 @@
-package sudokusolver;
+package com.sudokusolver;
 
 // SUDOKU SOLVER APPLICATION HOME
 
-import sudokusolver.applicationpage.ApplicationPage;
+import com.sudokusolver.applicationpage.ApplicationPage;
 
 public class Home {
 	public static void main(String[] args) {

@@ -1,10 +1,10 @@
-package sudokusolver.loginpage;
+package com.sudokusolver.loginpage;
 
 // SUDOKU SOLVER APPLICATION USER LOGIN VIEW PAGE - future update
 
 import java.util.Scanner;
 
-import sudokusolver.mainmenu.MainMenuView;
+import com.sudokusolver.mainmenu.MainMenuView;
 
 public class LoginView {
 	private LoginViewModel loginViewModel;

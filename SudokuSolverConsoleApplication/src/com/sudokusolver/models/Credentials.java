@@ -1,4 +1,4 @@
-package sudokusolver.models;
+package com.sudokusolver.models;
 
 // SUDOKU SOLVER APPLICATION MODEL - CREDENTIALS PAGE - future update
 

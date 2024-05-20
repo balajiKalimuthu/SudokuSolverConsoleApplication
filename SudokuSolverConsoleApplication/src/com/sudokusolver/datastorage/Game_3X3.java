@@ -1,8 +1,8 @@
-package sudokusolver.datastorage;
+package com.sudokusolver.datastorage;
 
 // SUDOKU SOLVER APPLICATION DATABASE - GAME 3 X 3 MATRIX PAGE
 
-import sudokusolver.models.Game;
+import com.sudokusolver.models.Game;
 
 class Game_3X3 extends Game {
 	private static int gameCount = 1;

@@ -1,4 +1,4 @@
-package sudokusolver.validator;
+package com.sudokusolver.validator;
 
 // SUDOKU SOLVER APPLICATION VALUE VALIDATOR PAGE - future update
 

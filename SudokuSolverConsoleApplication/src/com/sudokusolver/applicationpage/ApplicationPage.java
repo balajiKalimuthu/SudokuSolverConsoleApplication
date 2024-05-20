@@ -1,8 +1,8 @@
-package sudokusolver.applicationpage;
+package com.sudokusolver.applicationpage;
 
 // SUDOKU SOLVER APPLICATION PAGE
 
-import sudokusolver.mainmenu.MainMenuView;
+import com.sudokusolver.mainmenu.MainMenuView;
 
 public class ApplicationPage {
 	private static ApplicationPage app;

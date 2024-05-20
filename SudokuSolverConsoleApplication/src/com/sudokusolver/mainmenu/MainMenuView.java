@@ -1,11 +1,11 @@
-package sudokusolver.mainmenu;
+package com.sudokusolver.mainmenu;
 
 // SUDOKU SOLVER APPLICATION MAIN MENU PAGE
 
 import java.util.Scanner;
 
-import sudokusolver.applicationpage.ApplicationPage;
-import sudokusolver.gamemenu.GameView;
+import com.sudokusolver.applicationpage.ApplicationPage;
+import com.sudokusolver.gamemenu.GameView;
 
 public class MainMenuView {
 	private ApplicationPage app = ApplicationPage.getInstance();

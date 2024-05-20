@@ -1,9 +1,9 @@
-package sudokusolver.datastorage;
+package com.sudokusolver.datastorage;
 
 // SUDOKU SOLVER APPLICATION DATA STORAGE PAGE
 
-import sudokusolver.models.Credentials;
-import sudokusolver.models.Game;
+import com.sudokusolver.models.Credentials;
+import com.sudokusolver.models.Game;
 
 public class AppDataBase {
 	private static AppDataBase dataBase;

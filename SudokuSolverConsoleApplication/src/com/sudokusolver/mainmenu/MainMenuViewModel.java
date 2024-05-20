@@ -1,6 +1,6 @@
-package sudokusolver.mainmenu;
+package com.sudokusolver.mainmenu;
 
-import sudokusolver.datastorage.AppDataBase;
+import com.sudokusolver.datastorage.AppDataBase;
 
 public class MainMenuViewModel {
 	private AppDataBase dataBase = AppDataBase.getInstance();

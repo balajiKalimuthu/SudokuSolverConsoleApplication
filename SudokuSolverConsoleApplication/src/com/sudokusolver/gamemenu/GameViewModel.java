@@ -1,9 +1,9 @@
-package sudokusolver.gamemenu;
+package com.sudokusolver.gamemenu;
 
 // SUDOKU SOLVER APPLICATION GAME MODEL PAGE
 
-import sudokusolver.datastorage.AppDataBase;
-import sudokusolver.models.Game;
+import com.sudokusolver.datastorage.AppDataBase;
+import com.sudokusolver.models.Game;
 
 public class GameViewModel {
 	private AppDataBase dataBase = AppDataBase.getInstance();

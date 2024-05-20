@@ -1,10 +1,10 @@
-package sudokusolver.gamemenu;
+package com.sudokusolver.gamemenu;
 
 // SUDOKU SOLVER APPLICATION GAME VIEW PAGE
 
 import java.util.Scanner;
 
-import sudokusolver.models.Game;
+import com.sudokusolver.models.Game;
 
 public class GameView {
 	private Game game;
